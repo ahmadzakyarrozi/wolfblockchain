@@ -1,0 +1,48 @@
+/*gridtemplatecoloumn 1fr 1 fr berarti 2 coloumn 1 frame*/
+.abilities__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 4rem;
+}
+
+.card.abilities {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.abilities__icon {
+    background: var(--color-primary);
+    padding: 0.6rem;
+    border-radius: var(--border-radius-3);
+    font-size: 1.5rem;
+    color: var(--color-white);
+    transition: var(--transition);
+}
+
+.abilities:hover .abilities-icon {
+    background: var(--color-light);
+    color: var(--color-primary);
+}
+
+.abilities h4 {
+    margin-bottom:0.7rem ;
+}
+
+/*Media Tablet */
+@media screen and (max-width:1024px) {
+    .abilities__container{
+        gap:1.5rem;
+    }
+}
+
+/*Media Phone */
+@media screen and (max-width: 600px) {
+    .abilities__container {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .card.abilities {
+        gap:1.2rem;
+    }
+}
